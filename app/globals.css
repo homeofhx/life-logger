@@ -1,0 +1,119 @@
+:root {
+    color-scheme: dark;
+
+    --ink-950: #14161f;
+    --ink-900: #1b1e2b;
+    --ink-800: #242838;
+    --ink-700: #2c3145;
+    --ink-600: #3b4159;
+
+    --paper-100: #f3efe4;
+    --paper-300: #cfc9b8;
+    --paper-500: #8d8879;
+
+    --moss-500: #6e9b7b;
+    --moss-400: #86b393;
+    --moss-tint: rgba(110, 155, 123, 0.12);
+    --marmalade-500: #e8791e;
+    --marmalade-400: #f0954c;
+    --marmalade-tint: rgba(232, 121, 30, 0.08);
+
+    --page-bg: #f6f1e4;
+    --page-bg-alt: #efe8d6;
+    --page-text: #211d16;
+    --page-text-muted: #746c58;
+    --page-border: #e2d9c1;
+
+    --font-display: "Newsreader", "Iowan Old Style", "Georgia", serif;
+    --font-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        color-scheme: light;
+
+        --ink-950: #faf6ed;
+        --ink-900: #f2ecdc;
+        --ink-800: #e9e1cb;
+        --ink-700: #dfd5b9;
+        --ink-600: #cbbd9b;
+
+        --paper-100: #241f17;
+        --paper-300: #4e4636;
+        --paper-500: #6b6249;
+
+        --moss-500: #4f7a5c;
+        --moss-400: #3e6249;
+        --moss-tint: rgba(79, 122, 92, 0.14);
+        --marmalade-500: #d9670a;
+        --marmalade-400: #b85607;
+        --marmalade-tint: rgba(217, 103, 10, 0.08);
+
+        --page-bg: #fffdf8;
+        --page-bg-alt: #f7f1e2;
+        --page-text: #211d16;
+        --page-text-muted: #746c58;
+        --page-border: #e6ddc5;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: var(--ink-950);
+    color: var(--paper-100);
+    font-family: var(--font-body), serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+a {
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    color: inherit;
+}
+
+::selection {
+    background: var(--marmalade-500);
+    color: var(--ink-950);
+}
+
+.scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ink-600) transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background: var(--ink-600);
+    border-radius: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+}

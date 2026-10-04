@@ -1,0 +1,128 @@
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 22, 31, 0.72);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 100;
+    animation: fade 0.15s ease-out;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.dialog {
+    width: 100%;
+    max-width: 440px;
+    background: var(--page-bg);
+    color: var(--page-text);
+    border: 1px solid var(--page-border);
+    border-radius: 4px;
+    padding: 28px 28px 24px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.eyebrow {
+    margin: 0 0 6px;
+    font-family: var(--font-mono), serif;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--marmalade-500);
+}
+
+.title {
+    margin: 0 0 10px;
+    font-family: var(--font-display), serif;
+    font-weight: 500;
+    font-size: 26px;
+    color: var(--page-text);
+}
+
+.message {
+    margin: 0 0 16px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--page-text-muted);
+}
+
+.lineList {
+    list-style: none;
+    margin: 0 0 16px;
+    padding: 0;
+    border-top: 1px solid var(--page-border);
+}
+
+.lineList li {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--page-border);
+    font-family: var(--font-mono), serif;
+    font-size: 13px;
+}
+
+.lineNo {
+    flex: none;
+    color: var(--marmalade-500);
+    font-weight: 500;
+}
+
+.lineText {
+    color: var(--page-text);
+    overflow-wrap: anywhere;
+}
+
+.more {
+    color: var(--page-text-muted);
+    font-style: italic;
+}
+
+.formatHint {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 22px;
+    font-size: 13px;
+    color: var(--page-text-muted);
+}
+
+.formatHint code {
+    font-family: var(--font-mono), serif;
+    font-size: 13px;
+    background: var(--page-bg-alt);
+    border: 1px solid var(--page-border);
+    border-radius: 3px;
+    padding: 8px 10px;
+    color: var(--page-text);
+}
+
+.closeButton {
+    width: 100%;
+    padding: 11px 16px;
+    border: none;
+    border-radius: 3px;
+    background: var(--page-text);
+    color: var(--page-bg);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.closeButton:hover {
+    background: var(--page-text-muted);
+}
+
+.closeButton:focus-visible {
+    outline: 2px solid var(--marmalade-500);
+    outline-offset: 2px;
+}
